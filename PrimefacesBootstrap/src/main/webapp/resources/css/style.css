@@ -1,0 +1,48 @@
+/*
+	Outra alternativa seria extrair os arquivos do tema bootstrap.jar e alterar as classes do primefaces
+	.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default
+	e remover o listens que estão sendo resetados abaixo.
+*/
+/* reseta CSS dos botões do Primefaces para permitir o CSS do Bootstrap */
+.ui-state-default.btn, .ui-widget-content .ui-state-default.btn, .ui-widget-header .ui-state-default.btn { background-image: none !important; }
+.ui-button.btn {
+	text-shadow: none !important; background-image: none !important; filter: none !important; box-shadow: none !important;
+}
+
+/* Corrige o texto do botão */
+.btn-warning, .btn-danger, .btn-primary, .btn-success { color: #fff !important; }
+.btn-warning .ui-button-text-only .ui-button-text, .btn-danger .ui-button-text-only .ui-button-text,
+.btn-primary .ui-button-text-only .ui-button-text, .btn-success .ui-button-text-only .ui-button-text { display: inline; }
+
+/* fix split button */
+.ui-splitbutton { position:relative; /*top:2px;*/ left:5px; }
+.ui-splitbutton-menubutton { height:32px !important; }
+
+/* fix input text */
+.ui-widget-header .ui-inputfield, .ui-widget-content .ui-inputfield.form-control { padding: 6px 12px; }
+
+/* fix select one radio */
+.ui-selectoneradio label { padding-left: 4px; padding-right:4px; }
+
+/* fix combo box */
+.ui-selectonemenu { width:100% !important; height: 34px; }
+.ui-selectonemenu .ui-selectonemenu-trigger, .ui-selectcheckboxmenu .ui-selectcheckboxmenu-trigger { width: 23px !important; }
+.ui-selectcheckboxmenu-label-container, .ui-selectcheckboxmenu-label-container:hover { text-decoration: none; }
+.ui-selectonemenu .ui-selectonemenu-trigger .ui-icon { margin-top: 6px !important; }
+.ui-selectonemenu label.ui-selectonemenu-label { height: 32px; padding-top: 6px; }
+
+/* fix input spinner */
+.ui-spinner input[type="text"] { width:100%; height:34px; }
+
+/* fix input datepicker height */
+.hasDatepicker { height:34px; width:100%; }
+.date-field input[type="text"] { max-width:100px; }
+
+/* fix autocomplete com dropdown */
+.ui-autocomplete input[type="text"] { width:95%; height:34px; }
+
+/* fix input numeric height */
+.ui-inputNum input[type="text"] { width:100%; height:34px; }
+
+/* fix table header */
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default { background-image: none; }

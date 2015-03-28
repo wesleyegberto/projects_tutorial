@@ -1,0 +1,268 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Primefaces + Bootstrap</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<h:outputStylesheet library="bootstrap" name="css/bootstrap.css" />
+	<h:outputStylesheet library="css" name="style.css" />
+	
+	<h:outputScript library="bootstrap" name="js/bootstrap.min.js" />
+</h:head>
+<h:body>
+	<div class="container">
+		<div class="row">
+			<div class="panel panel-default">
+				<div class="panel-heading">Componentes JSF Padrão</div>
+				<div class="panel-body">
+					<h:form>
+						<div class="form-group">
+							<h:inputText styleClass="form-control" pt:placeholder="h:inputText + form-control" />
+						</div>
+						<div class="form-group">
+							<h:commandButton styleClass="btn btn-default" value="CommandButton + btn-default" action="#{indexController.showMessage()}" />
+						</div>
+						<div class="form-group">
+							<h:commandButton styleClass="btn btn-warning" value="CommandButton + btn-warning" action="#{indexController.showMessage}" />
+						</div>
+						<div class="form-group">
+							<h:commandButton styleClass="btn btn-danger" value="CommandButton + btn-danger" action="#{indexController.showMessage}" />
+						</div>
+						<div class="form-group">
+							<h:commandButton styleClass="btn btn-primary" value="CommandButton + btn-primary" action="#{indexController.showMessage}" />
+						</div>
+						<div class="form-group">
+							<h:commandButton styleClass="btn btn-success" value="CommandButton + btn-success" action="#{indexController.showMessage}" />
+						</div>
+						<div class="form-group">
+							<h:commandLink styleClass="btn btn-default" value="Commandlink + btn-default" action="#{indexController.showMessage}" />
+						</div>
+					</h:form>
+				</div>
+			</div>
+		</div>
+		<br/>
+		
+		<div class="row">
+			<p:panel header="Componentes JSF Primefaces">
+				<h:form>
+					<div class="form-group">
+						<p:inputText id="primefacesNameClassless" placeholder="p:inputText" />
+					</div>
+					<div class="form-group">
+						<div class="row">
+							<div class="col-sm-3 col-xs-4">
+								<p:inputText styleClass="form-control" placeholder="p:inputText + form-control" />
+							</div>
+							<div class="col-sm-3 col-xs-4">
+								<p:inputText styleClass="form-control" placeholder="p:inputText + form-control" disabled="true" />
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<p:commandButton value="Primefaces CommandButton" action="#{indexController.showMessage}" />
+					</div>
+					<div class="form-group">
+						<p:commandButton styleClass="btn btn-default" value="Primefaces CommandButton + btn-default" action="#{indexController.showMessage}" />
+					</div>
+					<div class="form-group">
+						<p:commandButton styleClass="btn btn-warning" value="Primefaces CommandButton + btn-warning" action="#{indexController.showMessage}" />
+					</div>
+					<div class="form-group">
+						<p:commandButton styleClass="btn btn-danger" value="Primefaces CommandButton + btn-danger" action="#{indexController.showMessage}" />
+					</div>
+					<div class="form-group">
+						<p:commandButton styleClass="btn btn-primary" value="Primefaces CommandButton + btn-primary" action="#{indexController.showMessage}" />
+					</div>
+					<div class="form-group">
+						<p:commandButton styleClass="btn btn-success" value="Primefaces CommandButton + btn-success" action="#{indexController.showMessage}" />
+					</div>
+					
+					<div class="form-group">
+						<h:commandLink styleClass="btn btn-default" value="Primefaces commandLink + btn-default" action="#{indexController.showMessage}" />
+					</div>
+					<div class="form-group">
+						<h:commandLink styleClass="btn btn-warning" value="Primefaces commandLink + btn-warning" action="#{indexController.showMessage}" />
+					</div>
+					<div class="form-group">
+						<h:commandLink styleClass="btn btn-danger" value="Primefaces commandLink + btn-danger" action="#{indexController.showMessage}" />
+					</div>
+					<div class="form-group">
+						<h:commandLink styleClass="btn btn-primary" value="Primefaces commandLink + btn-primary" action="#{indexController.showMessage}" />
+					</div>
+					<div class="form-group">
+						<h:commandLink styleClass="btn btn-success" value="Primefaces commandLink + btn-success" action="#{indexController.showMessage}" />
+					</div>
+					
+					<div class="form-group">
+						<div class="row">
+							<div class="col-sm-6 col-xs-6">
+								<p:splitButton value="SplitButton">
+							        <p:menuitem value="Ação 1" icon="ui-icon-arrowrefresh-1-w" />
+							        <p:menuitem value="Ação 2" icon="ui-icon-close" />
+							        <p:separator />
+							        <p:menuitem value="Ação 3" icon="ui-icon-extlink" />
+							    </p:splitButton>
+					    	</div>
+							<div class="col-sm-6 col-xs-6">
+								<div class="btn-group">
+									<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+									  SplitButton <span class="caret"></span>
+									</button>
+									<ul class="dropdown-menu" role="menu">
+									  <li><p:commandLink value="Ação 1" /></li>
+									  <li><p:commandLink value="Ação 2" /></li>
+									  <li class="divider"></li>
+									  <li><p:commandLink value="Ação 3" /></li>
+									</ul>
+				  				</div>
+							</div>
+					    </div>
+					</div>
+					
+					<div class="form-group">
+						<label class="checkbox-inline">
+							<p:selectBooleanCheckbox  /> 1
+						</label>
+						<label class="checkbox-inline">
+							<p:selectBooleanCheckbox  /> 2
+						</label>
+						<label class="checkbox-inline">
+							<p:selectBooleanCheckbox  /> 3
+						</label>
+					</div>
+					
+					<div class="form-group">
+						<p:selectOneRadio>
+				            <f:selectItem itemLabel="Item 1" itemValue="1" />
+				            <f:selectItem itemLabel="Item 2" itemValue="2" />
+				            <f:selectItem itemLabel="Item 3" itemValue="3" />
+				            <f:selectItem itemLabel="Item 4" itemValue="4" />
+						</p:selectOneRadio>
+					</div>
+					
+					<div class="form-group">
+						<div class="row">
+							<div class="col-sm-3 col-xs-4">
+								<p:selectOneMenu id="listItens">
+						            <f:selectItem itemLabel="Item 1" itemValue="1" />
+						            <f:selectItem itemLabel="Item 2" itemValue="2" />
+						            <f:selectItem itemLabel="Item 3" itemValue="3" />
+						            <f:selectItem itemLabel="Item 4" itemValue="4" />
+						        </p:selectOneMenu>
+							</div>
+							<div class="col-sm-3 col-xs-4">
+								<p:spinner id="spinner1" min="0" max="100" value="50" />
+							</div>
+							<div class="col-sm-3 col-xs-4">
+								<p:spinner id="spinner2" min="0" max="100" value="50" disabled="true" />
+							</div>
+							<div class="col-sm-3 col-xs-4">
+								<p:calendar pattern="dd/MM/yyyy" mask="true" maxlength="10" />
+							</div>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<div class="row">
+							<div class="col-sm-6 col-xs-6">
+								<p:autoComplete completeMethod="#{indexController.pesquisaPorNome}" dropdown="true" />
+							</div>
+							<div class="col-sm-6 col-xs-6">
+								<div class="input-group">
+								  	<span class="input-group-addon">$</span>
+							  		<p:inputText styleClass="form-control" aria-label="Amount (to the nearest dollar)" />
+							  		<span class="input-group-addon">.00</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<div class="row">
+							<div class="col-sm-3 col-xs-4">
+								<p:inputText styleClass="form-control input-sm" placeholder="form-control+input-sm" />
+							</div>
+							<div class="col-sm-3 col-xs-4">
+								<p:inputText styleClass="form-control"  placeholder="form-control"/>
+							</div>
+							<div class="col-sm-3 col-xs-4">
+								<p:inputText styleClass="form-control input-lg" placeholder="form-control+input-lg" />
+							</div>
+						</div>
+					</div>
+				</h:form>
+			</p:panel>
+		</div>
+		<br/>
+	
+		<!-- Forms -->
+		<div class="row">
+			<p:panel header="Form JSF Primefaces">
+				<h:form class="form-inline">
+					<div class="form-group">
+						<label for="input1">Name</label>
+						<p:inputText styleClass="form-control" id="input1" pt:placeholder="Jane Doe" />
+					</div>
+					<div class="form-group">
+						<label for="input2">Email</label>
+						<p:inputText styleClass="form-control" id="input2" pt:placeholder="jane.doe@example.com" />
+					</div>
+					<p:commandButton styleClass="btn btn-default" value="Send invitation" />
+				</h:form>
+			</p:panel>
+		</div>
+		<br/>
+		<div class="row">
+			<p:panel header="Form JSF Primefaces">
+				<form class="form-horizontal">
+					<div class="form-group">
+					  <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+					  <div class="col-sm-10">
+					    <p:inputText styleClass="form-control" id="inputEmail" pt:placeholder="Email" />
+					  </div>
+					</div>
+					<div class="form-group">
+					  <label for="inputPassword" class="col-sm-2 control-label">Password</label>
+					  <div class="col-sm-10">
+					    <p:password styleClass="form-control" id="inputPassword" pt:placeholder="Password" />
+					  </div>
+					</div>
+					<div class="form-group">
+					  	<div class="col-sm-offset-2 col-sm-10">
+					    	<label><p:selectBooleanCheckbox  /> Remember me </label>
+				  		</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+				  			<p:commandButton styleClass="btn btn-default" value="Sign in" />
+						</div>
+					</div>
+				</form>
+			</p:panel>
+		</div>
+		<br />
+		
+		
+		<div class="row">
+			<p:panel header="JSF Primefaces Table" >
+				<p:dataTable value="#{indexController.heroes}" var="heroe" >
+					<p:column headerText="Name">#{heroe.name}</p:column>
+					<p:column headerText="Power">
+						<h:outputText value="#{heroe.power}">
+							<f:convertNumber pattern="0.00" />
+						</h:outputText>
+					</p:column>
+				</p:dataTable>
+			</p:panel>
+		</div>
+		<br />
+		
+	</div>
+</h:body>
+</html>
+
